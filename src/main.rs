@@ -52,7 +52,7 @@ fn main() {
         // next_term = last_term + current_term;
         next_term = match last_term.checked_add(current_term) {  // check of overflow https://stackoverflow.com/questions/52646755/checking-for-integer-overflow-in-rust
             Some(addition_result) => addition_result,
-            None => panic!("Number too big now at {}", current_nth),
+            None => panic!("Number too big now at {}nth", current_nth),
         };
         last_term = current_term;
         current_term = next_term;
