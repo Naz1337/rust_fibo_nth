@@ -3,7 +3,7 @@ use std::io::prelude::*;
 use std::cmp::Ordering;
 
 fn main() {
-    let mut input_buffer: String = String::with_capacity(2);  // should allocate 2 byte here 
+    let mut input_buffer: String = String::with_capacity(8);  // should allocate 2 byte here 
     // let stdin: io::Stdin = io::stdin();
 
     print!("Please input the desired number.\n\n");
