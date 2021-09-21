@@ -50,7 +50,7 @@ fn main() {
     let mut next_term: isize;
     for current_nth in 0..(nth - 2) {  // in python, this `for _ in range(nth - 2):`.
         // next_term = last_term + current_term;
-        next_term = match last_term.checked_add(current_term) {  // check of overflow https://stackoverflow.com/questions/52646755/checking-for-integer-overflow-in-rust
+        next_term = match last_term.checked_add(current_term) {  // check for overflow https://stackoverflow.com/questions/52646755/checking-for-integer-overflow-in-rust
             Some(addition_result) => addition_result,
             None => panic!("Number too big now at {}nth", current_nth),
         };
